@@ -1,0 +1,207 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+      <link rel="stylesheet" href="{% static 'loginsignup/update.css' %}">
+  <title>EinNel</title>
+
+</head>
+
+<body>
+<div class="container">
+<div class="iam">
+  <div>
+    <a href={% url 'loginsignup:dashboard'%}> <button class="design" type = "button">Dashboard</button></a>
+  </div>
+  <div class="centreme">
+    <h1> Update Personal Details </h1>
+  </div>
+  <div class="centreme">
+    <h3> Note : This is a one time form, any subsequent changes can only be done by the HR </h3>
+  </div>
+  <div class="centreme">
+    {% if error %}
+      <h2 class="danger">{{error}}</h2>
+    {% endif %}
+  </div>
+</div>
+  <form method="POST">
+  {% csrf_token %}
+    <label for="fname">Age</label>
+    <input required type="text" id="fname" name="age" placeholder="Your Age..">
+
+    <label for="country">Attrition</label>
+    <select required id="country" name="attrition">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+    </select>
+
+    <label for="travel">Travel</label>
+    <select required id="travel" name="travel">
+      <option value="2">Travel Frequently</option>
+      <option value="1">Travel Rarely</option>
+      <option value="0">No Travel</option>
+    </select>
+
+    <label for="fname">DR</label>
+    <input required type="text" id="fname" name="dr" placeholder="Your DR..">
+
+    <label for="department">Department</label>
+    <select required id="department" name="department">
+      <option value="2">Sales</option>
+      <option value="1">Research and Development</option>
+      <option value="0">Human Resources</option>
+    </select>
+
+    <label for="fname">Distance</label>
+    <input required type="text" id="fname" name="distance" placeholder="Distance from home..">
+
+    <label for="ed">ED</label>
+    <select required id="ed" name="ed">
+      <option value="4">4</option>
+      <option value="3">3</option>
+      <option value="2">2</option>
+      <option value="1">1</option>
+    </select>
+
+    <label for="education">Education</label>
+    <select required id="education" name="education">
+      <option value="5">Human Resources</option>
+      <option value="4">Technical Degree</option>
+      <option value="3">Medical</option>
+      <option value="2">Marketing</option>
+      <option value="1">Life Sciences</option>
+      <option value="0">Other</option>
+    </select>
+
+    <label for="esatisfaction">Environment Satisfaction</label>
+    <select required id="esatisfaction" name="esatisfaction">
+      <option value="4">Highly Satisfied</option>
+      <option value="3">Moderately Satisfied</option>
+      <option value="2">Satisfied</option>
+      <option value="1">Unsatisfied</option>
+    </select>
+
+    <label for="gender">Gender</label>
+    <select required id="gender" name="gender">
+      <option value="1">Male</option>
+      <option value="0">Female</option>
+    </select>
+
+    <label for="fname">Hourly Rate</label>
+    <input required type="text" id="fname" name="hourlyrate" placeholder="Your Hourly Rate..">
+
+    <label for="involvment">Involvment</label>
+    <select required id="involvment" name="involvment">
+      <option value="4">Highly Involved</option>
+      <option value="3">Moderately Involved</option>
+      <option value="2">Barely Involved</option>
+      <option value="1">Not involved</option>
+    </select>
+
+    <label for="joblevel">Job Level</label>
+    <select required id="joblevel" name="joblevel">
+      <option value="4">4</option>
+      <option value="3">3</option>
+      <option value="2">2</option>
+      <option value="1">1</option>
+    </select>
+
+    <label for="role">Role</label>
+    <select required id="role" name="role">
+      <option value="8">Research Director</option>
+      <option value="7">Manufacturing Director</option>
+      <option value="6">Research Scientist</option>
+      <option value="5">Human Resources</option>
+      <option value="4">Sales Executive</option>
+      <option value="3">Manager</option>
+      <option value="2">Sales Representative</option>
+      <option value="1">Healthcare Representative</option>
+      <option value="0">Laboratory Technician</option>
+    </select>
+
+    <label for="satisfaction">Satisfaction</label>
+    <select required id="satisfaction" name="satisfaction">
+      <option value="4">Highly Satisfied</option>
+      <option value="3">Moderately Satisfied</option>
+      <option value="2">Satisfied</option>
+      <option value="1">Unsatisfied</option>
+    </select>
+
+    <label for="maritalstatus">Marital Status</label>
+    <select required id="maritalstatus" name="maritalstatus">
+      <option value="2">Married</option>
+      <option value="1">Single</option>
+      <option value="3">Divorced</option>
+    </select>
+
+    <label for="fname">Income</label>
+    <input required type="text" id="fname" name="income" placeholder="Your Income..">
+
+    <label for="fname">Monthly rate</label>
+    <input required type="text" id="fname" name="monthlyrate" placeholder="Your Monthly Rate..">    
+
+    <label for="fname">Number of Companies Worked Before</label>
+    <input required type="text" id="fname" name="prevCompanies" placeholder="Number of Previous Companies..">   
+
+    <label for="overtime">Overtime</label>
+    <select required id="overtime" name="overtime">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+    </select>
+
+    <label for="salary">Salary Hike</label>
+    <input required type="text" id="fname" name="salary" placeholder="Your Salary Hike..">
+
+    <label for="rsatisfaction">Relationship Satisfaction</label>
+    <select required id="rsatisfaction" name="rsatisfaction">
+      <option value="4">Highly Satisfied</option>
+      <option value="3">Moderately Satisfied</option>
+      <option value="2">Satisfied</option>
+      <option value="1">Unsatisfied</option>
+    </select>
+
+    <label for="stock">Stock Option Level</label>
+    <select required id="stock" name="stock">
+      <option value="3">3</option>
+      <option value="2">2</option>
+      <option value="1">1</option>
+      <option value="0">0</option>
+    </select>
+
+    <label for="working">Total Working Years</label>
+    <input required type="text" id="working" name="working" placeholder="Your Total Working Years..">
+
+    <label for="lastTrainingTime">Training Times Last Year</label>
+    <input required type="text" id="lastTrainingTime" name="lastTrainingTime" placeholder="Training Times Last Year..">
+
+    <label for="worklife">Work Life Balance</label>
+    <select required id="worklife" name="worklife">
+      <option value="4">Excellent</option>
+      <option value="3">Good</option>
+      <option value="2">Bad</option>
+      <option value="1">Very Bad</option>
+    </select>
+
+    <label for="yearsAtComp">Years At Company</label>
+    <input required type="text" id="yearsAtComp" name="yearsAtComp" placeholder="Years at Company..">
+
+    <label for="yearsAtCur">Years In Current Role</label>
+    <input required type="text" id="yearsAtCur" name="yearsAtCur" placeholder="Years in Current Role..">
+
+    <label for="lastprom">Years Since Last Promotion</label>
+    <input required type="text" id="lastprom" name="lastprom" placeholder="Years since Last Promotion..">
+
+    <label for="curManager">Years with Current Manager</label>
+    <input required type="text" id="curManager" name="curManager" placeholder="Years with Current Manager..">
+
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+
+</body>
+
+</html>
